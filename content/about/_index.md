@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2018-03-17T14:37:39-05:00
-draft: true
+draft: false
 ---
 
 ### Information
