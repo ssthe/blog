@@ -12,13 +12,13 @@ hasCJKLanguage = false
 	description = "A simple blog"
 	bio = "College Student"
 
-	twitter = "your_twitter_id"
-	facebook = "your_facebook_id"
+	twitter = "blueflymouse"
+	facebook = "shao11"
 
 	enableRSS = true
 	enableToc = true
 
-	enableDisqus = true
+	enableDisqus = false
 	disqusShortname = "your_disqus_short_name"
 
 
@@ -27,7 +27,7 @@ hasCJKLanguage = false
 	useDescriptionReplaceSummary = false
 
 
-	enableGoogleAnalytics = true
+	enableGoogleAnalytics = false
 	enableBaiduAnalytics = false
 	# Set the value to your baidu analysis code if you want to use baidu analytics
 	baiduAnalytics = 'your_baidu_analysis_code'
@@ -74,6 +74,6 @@ hasCJKLanguage = false
 
 # Add additional social link entries underneath
 [social]
-	facebook-square = "https://www.facebook.com/nodejh"
-	twitter-square = "https://www.twitter.com/nodejh"
-	github-square = "https://www.github.com/nodejh"
+	facebook-square = "https://www.facebook.com/shao11"
+	twitter-square = "https://www.twitter.com/blueflymouse"
+	github-square = "https://www.github.com/ssthe"
