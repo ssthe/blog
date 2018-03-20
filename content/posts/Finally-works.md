@@ -1,8 +1,13 @@
----
-title: "Finally Works"
-date: 2018-03-16T23:48:28-05:00
-draft: false
----
++++
+title = "Finally Works"
+date = 2018-03-16T23:48:28-05:00
+tags = [
+    "hugo",
+    "netlify",
+]
+categories = [""]
+draft = false
++++
 
 This is the first time I try to set up a blog.
 I have to say it is so hard.
