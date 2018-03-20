@@ -5,7 +5,7 @@ title = "Shiyi's Blog"
 theme = "hugo-theme-cactus-plus"
 googleAnalytics = "UA-115778221-1"
 # Set the value to true if your site include CJK (Chinese, Japanese, and Korean languages) characters
-hasCJKLanguage = false
+hasCJKLanguage = true
 
 [params]
 	author = "Shiyi Shao"
