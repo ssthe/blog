@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="author" content="Shiyi Shao">
+		<meta name="description" content="A simple blog">
+		<meta name="generator" content="Hugo 0.37.1" />
+		<title>Markdown笔记 &middot; Shiyi&#39;s Blog</title>
+		<link rel="shortcut icon" href="https://shao11.com/images/favicon.ico">
+		<link rel="stylesheet" href="https://shao11.com/css/style.css">
+		<link rel="stylesheet" href="https://shao11.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://shao11.com/css/font-awesome.min.css">
+		
+
+		
+		<link href="https://shao11.com/index.xml" rel="alternate" type="application/rss+xml" title="Shiyi&#39;s Blog" />
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://shao11.com/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://shao11.com/posts'>Archive</a>
+	<a href='https://shao11.com/tags'>Tags</a>
+	<a href='https://shao11.com/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://shao11.com/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Markdown笔记
+                    </h1>
+                    <h2 class="headline">
+                    Mar 21, 2018 16:50
+                    · 1299 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://shao11.com/tags/markdown">markdown</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#区块元素">区块元素</a>
+<ul>
+<li><a href="#换行">换行</a></li>
+<li><a href="#标题">标题</a></li>
+<li><a href="#区块引用">区块引用</a></li>
+<li><a href="#列表">列表</a></li>
+<li><a href="#代码区块">代码区块</a></li>
+<li><a href="#分隔线">分隔线</a></li>
+</ul></li>
+<li><a href="#区段元素">区段元素</a>
+<ul>
+<li><a href="#链接">链接</a></li>
+<li><a href="#强调">强调</a></li>
+<li><a href="#代码">代码</a></li>
+<li><a href="#图片">图片</a></li>
+</ul></li>
+<li><a href="#其他">其他</a>
+<ul>
+<li><a href="#自动链接">自动链接</a></li>
+<li><a href="#反斜杠">反斜杠</a></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<p>这是笔者学习<a href="http://wowubuntu.com/markdown/" title="Markdown 语法说明 \(简体中文版\)">这个文档</a>时自己摘抄总结的笔记，去掉了一些详细描述机制的部分，作为方便以后自己查找作为工具使用，请注意所有内容并非原创，均来自<a href="http://wowubuntu.com">http://wowubuntu.com</a></p>
+
+<hr />
+
+<h1 id="区块元素">区块元素</h1>
+
+<h2 id="换行">换行</h2>
+
+<p>使用<code>&lt;br /&gt;</code></p>
+
+<pre><code>第一行&lt;br /&gt;
+第二行
+</code></pre>
+
+<p>使用空格</p>
+
+<pre><code>第一行（此处后有两个空格）  
+第二行
+</code></pre>
+
+<p><br /></p>
+
+<h2 id="标题">标题</h2>
+
+<p>atx</p>
+
+<pre><code>### 我是标题
+</code></pre>
+
+<p>由一个或多个“#”符号组成<br />
+根据“#”数量的不同分别等价于h1，h2和h3的HTML tag，依此类推</p>
+
+<p>Setext</p>
+
+<pre><code>我是h1
+====================
+我是h2
+--------------------
+</code></pre>
+
+<p>符号的数量随意。<br />
+<br /></p>
+
+<h2 id="区块引用">区块引用</h2>
+
+<p>普通引用</p>
+
+<pre><code>&gt; This is an expample for blockquotes
+&gt; 这是一个区块引用的例子
+&gt; これはブロック参照の例です
+</code></pre>
+
+<p>也可以只在每个段落前使用<code>&gt;</code></p>
+
+<pre><code>&gt; This is an expample for blockquotes This is an expample for 
+blockquotes This is an expample for blockquotes This is an expample 
+for blockquotes This is an expample for blockquotes
+&gt; 这是一个区块引用的例子 这是一个区块引用的例子 这是一个区块引用的例子 这是一个
+区块引用的例子 这是一个区块引用的例子 这是一个区块引用的例子
+&gt; これはブロック参照の例です これはブロック参照の例です これはブロック参照の例
+です これはブロック参照の例です これはブロック参照の例です これはブロック参照の
+例です
+</code></pre>
+
+<p>嵌套</p>
+
+<pre><code>&gt; ### This is an expample for blockquotes
+&gt; &gt; 这是一个区块引用的例子
+&gt; 1. これはブロック参照の例です
+</code></pre>
+
+<p>所有的markdown语法，包括引用自身，都可以在区块引用内嵌套使用<br />
+<br /></p>
+
+<h2 id="列表">列表</h2>
+
+<p>无序列表<br />
+使用<code>+</code>、<code>-</code>或<code>*</code></p>
+
+<pre><code>+ apple
++ banana
++ cactus
+
+- 苹果
+- 香蕉
+- 仙人掌
+
+* リンゴ
+* バナナ
+* サボテン
+</code></pre>
+
+<p>以上三种完全等价</p>
+
+<p>有序列表
+使用罗马数字+英文句点</p>
+
+<pre><code>1. 苹果
+2. 香蕉
+3. 仙人掌
+</code></pre>
+
+<p>目前罗马数字的值本身并不影响最后的HTML结果，也就是说这些罗马数字可以取任意值，而最后的结果仍然是顺序列表</p>
+
+<p>多段落列表</p>
+
+<pre><code>1.  This is the first paragraph This is the first paragraph This is the
+    first paragraph This is the first paragraph This is the first paragraph
+    This is the first paragraph
+
+    这是第二段 这是第二段 这是第二段 这是第二段 这是第二段 这是第二段 这是第
+    二段 这是第二段 这是第二段 这是第二段 这是第二段
+
+2.  This is the second item This is the second item This is the second item
+    This is the second item This is the second item This is the second item 
+    This is the second item
+</code></pre>
+
+<p>每个项目下的段落需要缩进四个空格或一个制表符<br />
+<br /></p>
+
+<h2 id="代码区块">代码区块</h2>
+
+<p>使用四个空格或者一个制表符</p>
+
+<pre><code>这是普通的文字
+
+    //这是代码区块文字
+    System.out.println(&quot;你好&quot;);
+</code></pre>
+
+<p>不管是HTML还是Markdown的语法基本上在代码区块里是无效的，也就是说可以使用各种符号而不用担心是否需要转义字符或者其他<br />
+<br /></p>
+
+<h2 id="分隔线">分隔线</h2>
+
+<p>使用多个<code>*</code>，<code>_</code>或<code>-</code>，可以选择在其中加入空格</p>
+
+<pre><code>* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+</code></pre>
+
+<hr />
+
+<h1 id="区段元素">区段元素</h1>
+
+<h2 id="链接">链接</h2>
+
+<p>行内式</p>
+
+<pre><code>This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+
+[This link](http://example.net/) has no title attribute.
+</code></pre>
+
+<p>参考式</p>
+
+<pre><code>This is [an example][id] reference-style link.
+</code></pre>
+
+<p>然后在文件任意处添加</p>
+
+<pre><code>[id]: http://example.com/  &quot;Optional Title Here&quot;
+</code></pre>
+
+<p>更多用法详见参考<br />
+<br /></p>
+
+<h2 id="强调">强调</h2>
+
+<p>使用一个<code>*</code>或<code>_</code></p>
+
+<pre><code>*斜体*
+_italic_
+</code></pre>
+
+<p>使用两个<code>*</code>或<code>_</code></p>
+
+<pre><code>**粗体**
+__bold__
+</code></pre>
+
+<p>如果<code>*</code>或<code>_</code>两边都是空白，它们等同于普通符号<br />
+想要literally把文字用这两个符号框起来请使用转义符号<code>\</code>
+<br /></p>
+
+<h2 id="代码">代码</h2>
+
+<p>小段行内代码用<code>`</code>包起来</p>
+
+<pre><code>Java uses `System.out.print()` to print on the teminal
+</code></pre>
+
+<p>而在行内代码包含了<code>`</code>的情况下，则用多个<code>`</code>来包裹代码内容</p>
+
+<pre><code>``This is an exaple for ` in the code section``
+</code></pre>
+
+<p>当<code>`</code>出现在开头或结尾时，请使用空格</p>
+
+<pre><code>`` `this is sample` ``
+</code></pre>
+
+<p><br /></p>
+
+<h2 id="图片">图片</h2>
+
+<p>行内式</p>
+
+<pre><code>![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+</code></pre>
+
+<p>参考式</p>
+
+<pre><code>![Alt text][id]
+</code></pre>
+
+<p>图片参考定义</p>
+
+<pre><code>[id]: url/to/image  &quot;Optional title attribute&quot;
+</code></pre>
+
+<p>Markdown暂时不支持定义图片宽高，如有需求请直接使用<code>&lt;img&gt;</code>tag
+<br /></p>
+
+<hr />
+
+<h1 id="其他">其他</h1>
+
+<h2 id="自动链接">自动链接</h2>
+
+<p>使用<code>&lt;</code>和<code>&gt;</code>包住链接</p>
+
+<pre><code>//这是一个网络链接范例
+&lt;https://google.com&gt;
+
+//这是一个邮箱地址范例
+&lt;example@gmail.com&gt;
+</code></pre>
+
+<p><br /></p>
+
+<h2 id="反斜杠">反斜杠</h2>
+
+<p>反斜杠<code>\</code>一如既往做转义符号使用，此处不再赘述<br />
+<br /></p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fshao11.com%2fposts%2fmarkdown-notes%2f - Markdown%e7%ac%94%e8%ae%b0 by @blueflymouse"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/shao11">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/ssthe">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/shao11/">
+        <i class="fa fa-linkedin-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> Shiyi Shao
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://shao11.com/js/jquery-3.3.1.min.js"></script>
+<script src="https://shao11.com/js/main.js"></script>
+<script src="https://shao11.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-115778221-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

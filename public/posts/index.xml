@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Shiyi&#39;s Blog</title>
-    <link>https://shao11.com/</link>
-    <description>Recent content on Shiyi&#39;s Blog</description>
+    <title>Posts on Shiyi&#39;s Blog</title>
+    <link>https://shao11.com/posts/</link>
+    <description>Recent content in Posts on Shiyi&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 21 Mar 2018 16:50:30 -0500</lastBuildDate>
     
-	<atom:link href="https://shao11.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shao11.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Shiyi&#39;s Blog</title>
+    <link>https://shao11.com/tags/hugo/</link>
+    <description>Recent content in Hugo on Shiyi&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 16 Mar 2018 23:48:28 -0500</lastBuildDate>
+    
+	<atom:link href="https://shao11.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Finally Works</title>
+      <link>https://shao11.com/posts/finally-works/</link>
+      <pubDate>Fri, 16 Mar 2018 23:48:28 -0500</pubDate>
+      
+      <guid>https://shao11.com/posts/finally-works/</guid>
+      <description>This is the first time I try to set up a blog. I have to say it is so hard.
+The framework I choosed Hugo, it is good, at least for now. The real problem is about hosting. Though Hugo gives several ways to host the blog, it turns out to be very difficult.
+For hosting server I first used VM from Google cloud platform, but I met some really confusing issues about deploying the blog.</description>
+    </item>
+    
+  </channel>
+</rss>

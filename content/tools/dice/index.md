@@ -26,6 +26,7 @@ function roll() {
 }
 </script>
 
+<center>
 Number <input type="number" id="dnum" value="1" min="0" max="10"></input>
 <br />
 Dice Type <input type="number" id="dmax" value="6" min="1"></input>
@@ -34,3 +35,4 @@ Dice Type <input type="number" id="dmax" value="6" min="1"></input>
 <br />
 <br />
 <span id="print"></span>
+</center>

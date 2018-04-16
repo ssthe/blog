@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="author" content="Shiyi Shao">
+		<meta name="description" content="A simple blog">
+		<meta name="generator" content="Hugo 0.37.1" />
+		<title>Finally Works &middot; Shiyi&#39;s Blog</title>
+		<link rel="shortcut icon" href="https://shao11.com/images/favicon.ico">
+		<link rel="stylesheet" href="https://shao11.com/css/style.css">
+		<link rel="stylesheet" href="https://shao11.com/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://shao11.com/css/font-awesome.min.css">
+		
+
+		
+		<link href="https://shao11.com/index.xml" rel="alternate" type="application/rss+xml" title="Shiyi&#39;s Blog" />
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://shao11.com/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://shao11.com/posts'>Archive</a>
+	<a href='https://shao11.com/tags'>Tags</a>
+	<a href='https://shao11.com/about'>About</a>
+
+	
+
+	
+	<a class="cta" href="https://shao11.com/index.xml">Subscribe</a>
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Finally Works
+                    </h1>
+                    <h2 class="headline">
+                    Mar 16, 2018 23:48
+                    · 503 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://shao11.com/tags/hugo">hugo</a>
+                          
+                              <a href="https://shao11.com/tags/netlify">netlify</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                
+                <section id="post-body">
+                    <p>This is the first time I try to set up a blog.
+I have to say it is so hard.</p>
+
+<p>The framework I choosed Hugo, it is good, at least for now.
+The real problem is about hosting. Though Hugo gives several ways to host the blog, it turns out to be very difficult.</p>
+
+<p>For hosting server I first used VM from Google cloud platform, but I met some really confusing issues about deploying the blog. Hugo uses Rsync to deploy the website, but the server from google keeps refusing by saying that there was a &ldquo;permission denied (public key)&rdquo; error. Though I did some research on SSH, private and public keys, at last nothing works so I have to abandon that.</p>
+
+<p>Then I transfer to Netlify. At first there is a tons of buiding errors poping up, so I have to go through everything I have done to debug.</p>
+
+<p>The first error is about the theme issue. Netlify reads from Github repos, try to clone the repo and bulid it. At first the blog works locally but it cannot find theme documents. I skim through everything and I find out that Git does not trace documents inside the &ldquo;theme&rdquo; directory.</p>
+
+<p>The reason is that Hugo download theme by cloning repos from Github, and for that reason, the theme itself is already a repo, it could not be included in our repo!</p>
+
+<p>OK, that&rsquo;s why the offical Hugo document suggest us to use &ldquo;git submodule&rdquo; on themes for Netlify. I tried several time, but nope, &ldquo;git submodule&rdquo; does not work at all. So I have to delete the &ldquo;.git&rdquo; file inside the theme directory, thus combine two repo into one, and it works!</p>
+
+<p>But new problem arises, I get a new error code 255. According to the debuging page, it is a known bug when Nelify have different Hugo version than you. You need to add a configuration called &ldquo;HUGO_VERSION&rdquo; and set it to the version of your Hugo.</p>
+
+<p>Then the most magical thing happens, I check the version number of Hugo on my Windows 10 machine, it says 0.37, I enter that information, and I still get the 255 error.</p>
+
+<p>Well, interesting.</p>
+
+<p>I think about a lot of posibilities and at last I choose to upgrade my Hugo version. I have work with Hugo on Linux before and I knew the lastest version is &ldquo;0.37.1&rdquo;. I go to the release page of Hugo on Github, and find the download for Hugo 0.37.1 there. I figure out how to &ldquo;install&rdquo; that, it is only replacing the hugo.exe file under something like &ldquo;programData/choco/bin&rdquo; directory.</p>
+
+<p>And Bang! Finally it works!</p>
+
+<p>Later about customizing domain does not take much time, theres no bugs appearing, everything just work as expected as I changed the DNS server for my domain. The only thing is that it really takes a while to refect the changes in DNS.</p>
+
+<p>Anyway, cheers for finishing this goal! The next thing I may need to configure this blog and try to learn some Markdown.</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fshao11.com%2fposts%2ffinally-works%2f - Finally%20Works by @blueflymouse"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.facebook.com/shao11">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.github.com/ssthe">
+        <i class="fa fa-github-square"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/shao11/">
+        <i class="fa fa-linkedin-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> Shiyi Shao
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://shao11.com/js/jquery-3.3.1.min.js"></script>
+<script src="https://shao11.com/js/main.js"></script>
+<script src="https://shao11.com/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-115778221-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>
