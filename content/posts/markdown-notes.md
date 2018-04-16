@@ -6,7 +6,7 @@ categories = [""]
 draft = false
 +++
 
-这是笔者学习[这个文档](http://wowubuntu.com/markdown/#acknowledgement "Markdown 语法说明 \(简体中文版\)")时自己摘抄总结的笔记，去掉了一些详细描述机制的部分，作为方便以后自己查找作为工具使用，请注意所有内容并非原创，均来自<http://wowubuntu.com>
+这是笔者学习[这个文档](http://wowubuntu.com/markdown/ "Markdown 语法说明 \(简体中文版\)")时自己摘抄总结的笔记，去掉了一些详细描述机制的部分，作为方便以后自己查找作为工具使用，请注意所有内容并非原创，均来自<http://wowubuntu.com>
 
 ***
 # 区块元素
